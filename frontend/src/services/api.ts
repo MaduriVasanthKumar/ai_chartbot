@@ -4,7 +4,8 @@ import type {
   MockInterview, MockInterviewResult, MockInterviewHistoryItem, GeneratedImage
 } from '../types';
 
-const API_BASE = '/api';
+const API_BASE =
+  import.meta.env.VITE_API_BASE_URL || '/api';
 const TOKEN_KEY = 'edumate_access_token';
 
 export function getAccessToken(): string | null {
