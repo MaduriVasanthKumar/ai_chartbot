@@ -1,0 +1,102 @@
+@import "tailwindcss";
+@import "katex/dist/katex.min.css";
+
+@layer base {
+  :root {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --accent: #8b5cf6;
+    --accent-hover: #7c3aed;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: #f8fafc;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Math formatting overrides */
+.katex-display {
+  margin: 1em 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.5em 0;
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* EduMate theme modes. The application uses slate utility classes throughout,
+   so light-mode overrides keep every workspace visually consistent. */
+html[data-theme='light'] body {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+.light-mode {
+  color-scheme: light;
+  background-color: #f1f5f9 !important;
+  color: #0f172a;
+}
+
+.light-mode [class~='bg-slate-950'] { background-color: #ffffff !important; }
+.light-mode [class~='bg-slate-950/40'] { background-color: rgba(255, 255, 255, 0.72) !important; }
+.light-mode [class~='bg-slate-950/60'] { background-color: rgba(255, 255, 255, 0.86) !important; }
+.light-mode [class~='bg-slate-900'] { background-color: #f8fafc !important; }
+.light-mode [class~='bg-slate-900/50'] { background-color: rgba(248, 250, 252, 0.82) !important; }
+.light-mode [class~='bg-slate-900/60'] { background-color: rgba(248, 250, 252, 0.92) !important; }
+.light-mode [class~='bg-slate-900/90'] { background-color: rgba(248, 250, 252, 0.92) !important; }
+.light-mode [class~='bg-slate-800'] { background-color: #e2e8f0 !important; }
+.light-mode [class~='bg-slate-800/50'] { background-color: rgba(226, 232, 240, 0.62) !important; }
+.light-mode [class~='bg-slate-800/60'] { background-color: rgba(226, 232, 240, 0.76) !important; }
+.light-mode [class~='bg-slate-700'] { background-color: #cbd5e1 !important; }
+
+.light-mode [class~='text-slate-100'] { color: #0f172a !important; }
+.light-mode [class~='text-slate-200'] { color: #1e293b !important; }
+.light-mode [class~='text-slate-300'] { color: #334155 !important; }
+.light-mode [class~='text-slate-400'] { color: #475569 !important; }
+.light-mode [class~='text-slate-500'] { color: #64748b !important; }
+.light-mode [class~='text-slate-600'] { color: #94a3b8 !important; }
+.light-mode [class~='text-slate-700'] { color: #cbd5e1 !important; }
+.light-mode [class~='placeholder:text-slate-600']::placeholder { color: #94a3b8 !important; }
+
+.light-mode [class~='border-slate-800'] { border-color: #e2e8f0 !important; }
+.light-mode [class~='border-slate-700'] { border-color: #cbd5e1 !important; }
+.light-mode [class~='border-slate-600'] { border-color: #94a3b8 !important; }
+.light-mode [class~='divide-slate-800'] > :not(:first-child) { border-color: #e2e8f0 !important; }
+
+.light-mode [class~='hover:bg-slate-800/50']:hover { background-color: rgba(226, 232, 240, 0.76) !important; }
+.light-mode [class~='hover:bg-slate-800/60']:hover { background-color: #cbd5e1 !important; }
+.light-mode [class~='hover:bg-slate-700/80']:hover { background-color: #cbd5e1 !important; }
+.light-mode [class~='hover:text-slate-100']:hover { color: #0f172a !important; }
+.light-mode [class~='hover:text-slate-200']:hover { color: #1e293b !important; }
+.light-mode [class~='hover:border-slate-500']:hover { border-color: #64748b !important; }
+
+html[data-theme='light'] ::-webkit-scrollbar-track { background: #e2e8f0; }
+html[data-theme='light'] ::-webkit-scrollbar-thumb { background: #94a3b8; }
+html[data-theme='light'] ::-webkit-scrollbar-thumb:hover { background: #64748b; }

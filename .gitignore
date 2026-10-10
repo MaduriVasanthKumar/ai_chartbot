@@ -1,0 +1,37 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+
+# Local application data
+*.db
+*.sqlite
+*.sqlite3
+backend/uploads/
+uploads/
+.runtime/
+
+# Logs
+*.log
+
+# Frontend dependencies and build output
+frontend/node_modules/
+frontend/dist/
+node_modules/
+dist/
+
+# Tooling and local files
+*.local
+.DS_Store
+.vscode/
+.idea/
